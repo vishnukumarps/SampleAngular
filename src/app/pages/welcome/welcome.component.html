@@ -1,0 +1,54 @@
+<button nz-button nzType="primary">Primary Button</button>
+<button nz-button nzType="default">Default Button</button>
+<button nz-button nzType="dashed">Dashed Button</button>
+<button nz-button nzType="text">Text Button</button>
+
+
+
+<a nz-button nzType="link">Link Button</a>
+
+
+
+<!-- 
+<div *ngIf="condition1; else elseBlock">
+    Content to render when condition is true.
+</div>
+<ng-template #elseBlock>
+    Content to render when condition is false.
+</ng-template> -->
+
+
+<div [ngSwitch]="a">
+
+    <div *ngSwitchCase="1">
+           <h1>Welcome admin</h1>
+    </div>
+    <div *ngSwitchCase="2">
+           <h1>Two</h1>
+    </div>
+    <div  *ngSwitchDefault>
+         <h1>Default value</h1>
+    </div>
+
+</div>
+
+
+<div *ngFor="let i of students">
+         <h3>{{i}}</h3>
+</div>
+
+<nz-table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of students;">
+             <td>{{i}}</td>
+            <td>{{i}}</td>
+           
+        </tr>
+    </tbody>
+</nz-table>
