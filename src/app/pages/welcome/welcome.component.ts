@@ -1,3 +1,4 @@
+import { SampleService } from './../sample.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,6 +10,7 @@ export class WelcomeComponent implements OnInit {
   condition1 = false;
   isVisible = false;
   a = 1;
+  empList: any;
   students = ['Vishnu', 'Gopu', 'Reshma'];
 
   employees = [
@@ -31,16 +33,23 @@ export class WelcomeComponent implements OnInit {
 
   ];
 
+  // tslint:disable-next-line: typedef
   show() {
     this.isVisible = true;
   }
 
+  // tslint:disable-next-line: typedef
   hide() {
     this.isVisible = false;
   }
-  constructor() { }
+  constructor(private sampleService: SampleService) { }
 
+  // tslint:disable-next-line: typedef
   ngOnInit() {
+    this.sampleService.getEmplList().subscribe(s => {
+      this.empList = s;
+
+    });
   }
 
 }

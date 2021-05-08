@@ -1,0 +1,27 @@
+<p>employee-list works!</p>
+<nz-table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Place</th>
+            <th>Mobile</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of empList;">
+            <td>{{i.title}}</td>
+            <td>{{i.userId}}</td>
+            <td>{{i.body}}</td>
+
+        </tr>
+    </tbody>
+</nz-table>
+
+
+<form [formGroup]="form">
+    <input type="text" formControlName="firstName" nz-input id="firstname" />
+    <br>
+    <input type="text" formControlName="lastName" nz-input id="firstname" />
+    <br>
+    <button nz-button (click)="submitForm()">Submit</button>
+</form>
