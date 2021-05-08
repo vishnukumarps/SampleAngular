@@ -48,8 +48,6 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
     this.sampleService.getEmplList().subscribe(s => {
       this.empList = s;
-
     });
   }
-
 }
