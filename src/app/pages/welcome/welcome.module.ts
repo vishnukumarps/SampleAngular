@@ -1,3 +1,4 @@
+import { ExampleService } from './example.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SampleService } from './../sample.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,6 +11,7 @@ import { WelcomeComponent } from './welcome.component';
 import { CommonModule } from '@angular/common';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { TestApiCallComponent } from './test-api-call/test-api-call.component';
 
 
 @NgModule({
@@ -17,12 +19,12 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
     WelcomeRoutingModule,
     DemoNgZorroAntdModule,
     CommonModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
+     HttpClientModule,
+     FormsModule,
+     ReactiveFormsModule
   ],
-  declarations: [WelcomeComponent, AddStudentComponent, EmployeeListComponent],
+  declarations: [WelcomeComponent, AddStudentComponent, EmployeeListComponent, TestApiCallComponent],
   exports: [WelcomeComponent],
-  providers: [SampleService]
+  providers: [SampleService, ExampleService]
 })
 export class WelcomeModule { }
