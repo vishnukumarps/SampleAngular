@@ -11,7 +11,7 @@ export class EmployeeListComponent implements OnInit {
   empList: any;
   form: FormGroup;
   constructor(private sampleService: SampleService,
-              private fb: FormBuilder) {
+    private fb: FormBuilder) {
 
     this.form = this.fb.group({
       firstName: [''],
@@ -29,6 +29,9 @@ export class EmployeeListComponent implements OnInit {
   // tslint:disable-next-line: typedef
   submitForm() {
     console.log('Ans', this.form.value);
+    this.sampleService.addEmployee(this.form.value).subscribe(s => {
+
+    });
   }
 
 }

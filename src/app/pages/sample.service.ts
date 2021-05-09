@@ -14,4 +14,9 @@ export class SampleService {
   getEmplList() {
     return this.http.get('https://jsonplaceholder.typicode.com/posts');
   }
+
+  // tslint:disable-next-line: typedef
+  addEmployee(data: any) {
+    return this.http.post('https://jsonplaceholder.typicode.com/posts', data);
+  }
 }
